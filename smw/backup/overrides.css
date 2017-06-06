@@ -1,0 +1,81 @@
+#homepageWrapper .slideshowSlideTitles h3 {
+    font-size: 1em;
+}
+
+.slideshowOverlay .slideshowOverlayContainer {
+    min-height: 22px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#homepageServices .readmore {
+    font-size: 0.9375em;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 1px;
+}
+
+#tl1 .item .my_timeline_content h2, #content #tl1 .item .my_timeline_content h2, #tl1 .item span, #content #tl1 .item span {
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.servicesQuoteText p, .industryQuoteText p {
+    font-size: 1.9em;
+    margin-right: 75px;
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    line-height: 1.25em;
+}
+
+.servicesQuoteText p.quoteAttribution, .industryQuoteText p.quoteAttribution {
+    text-align: right;
+    font-size: 1.5em;
+    margin-top: -.5em;
+}
+
+@media screen and (max-width: 492px) {
+  .locationRelatedItems article:nth-child(2n) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navDropdownWrapper.careersNav { display: none; }
+}
+
+@media screen and (max-width: 700px) {
+  .contactMap .mapplic-element {
+    display: none;
+  }
+  #locationsWrapper {
+    height: auto;
+    min-height: 0;
+    margin-top: 60px;
+  }
+  .contactMainWrapper {
+    position: static;
+  }
+  .contactMainContent{
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+#mobile-nav > ul > li.menu-177  button,
+#mobile-nav > ul > li.menu-2149  button
+{ display: none; }
+
+#mobile-nav .navDropdownWrapper a {
+    font-size: 1em;
+    display: block;
+    padding: 2px 0px 12px 0px;
+    color: black;
+}
+
+p.location-address {
+    margin-top: -10px;
+    margin-bottom: 48px;
+}

@@ -1,0 +1,203 @@
+footer {
+  background-color: $gray;
+  padding: $footerPad 0 $footerPad + 10;
+  height: $footerHeight;
+  margin-top: 80px;
+  a {
+    color: #000000;
+    &:hover { color: $purple; border: 0; }
+  }
+}
+
+#footerContent {
+  @extend %fullWidth;
+}
+
+#footerNav {
+  > ul {
+    @extend %col-12;
+    @extend %col-xl-10;
+    @extend %flex;
+    margin: auto;
+    float: none;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid $darkgray;
+    -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+    justify-content: space-between;
+    > li {
+      font-size: em(18px);
+    }
+  }
+}
+
+.copyInfo {
+  @extend %col-10;
+  margin: auto;
+  float: none;
+  font-size: em(15px);
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0 $gutter / 2;
+  }
+  &,a { color: $darkgray; }
+}
+
+@media screen and (max-width: $mdsm) {
+  footer { height: auto; }
+  #footerNav { 
+    > ul { display: block; 
+      > li { text-align: center; }
+    }
+    .social { text-align: center; margin-top: 1em;
+      li { float: none; display: inline-block; }
+    }
+  }
+}
+
+#mobile-nav {
+    height: -webkit-calc(100vh - 90px);
+    height: calc(100vh - #{$headerH + $extNavH});
+    width: 100%;
+    position: fixed;
+    top: $headerH + $extNavH;
+    right: -100%;
+    background-color: $beige;
+    -webkit-transition: right 0.25s;
+    transition: right 0.25s;
+    z-index: 3000;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    &.open {
+      right: 0;
+    }
+    > ul {
+      padding-top: 20px;
+      @extend %fullWidth;
+      > li {
+        @extend %clearAfter;
+        border-bottom: 1px solid $lightgray;
+        > a {
+        	width: -webkit-calc(95% - 40px);
+          width: #{calc(95% - 40px)};
+          display: block;
+          float: left;
+          -webkit-box-sizing: border-box;
+		  -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          color: $black;
+          padding: 12px 0;
+          font-size: em(21px);
+          line-height: 1em;
+          height: 45px;
+        }
+        &.current_page {
+           a { color: $purple; }
+        }
+        button {
+          width: 40px;
+          height: 45px;
+          float: right;
+          display: block;
+          border: 0;
+          background: transparent;
+          @extend %glyphs;
+          font-size: 21px;
+          &:after {
+            content: "\f107";
+          }
+          &,&:focus {outline:0;}
+        }
+      }
+    }
+    .navDropdownWrapper {
+      display: none;
+      @extend %clearAfter;
+      a {
+        font-size: em(16px);
+        display: block;
+        padding: 8px 0;
+        color: $black;
+      }
+      &.dropdown-open {
+        display: block;
+      }
+    }
+    .navDropdownWrapper.locations {
+    	li {
+    		width: 50%;
+    		float: left;
+    	}
+    }
+    a {
+          &:hover { border: 0; }
+    }
+    @media screen and (max-width: $mdsm) {
+      height: -webkit-calc(100vh - 60px);
+      height: calc(100vh - #{$headerH});
+      top: $headerH;
+    }
+    @media screen and (min-width: $lg + 1) {
+      display: none;
+    }
+}
+
+/*
+
+    min-height: #{calc(100vh - 90px)};
+    width: 100%;
+    top: 100%;
+    right: -100%;
+    position: absolute;
+    padding: 0;
+    background-color: $beige;
+    &.open { right: 0; }
+    > ul {
+      height: auto;
+      display: block;
+      > li {
+        text-align: center;
+        > a {
+          padding: 12px;
+          box-sizing: border-box;
+          //width: calc(100% - #{60px});
+          //float: left;
+          &:before { display: none; }
+        }
+        
+        button.dropdown {
+          display: block;
+        }
+        &:hover .navDropdownWrapper { display: none; }
+        &.current_page {
+          > a { color: $purple; }
+          &:hover .navDropdownWrapper { display: block; }
+          
+         .navDropdownWrapper {background-color: $beige; }
+        }
+      }
+    }
+    .navDropdownWrapper {
+      position: static;
+      &.locations {
+        display: none !important;
+      }
+    }
+    .navDropdown {
+      padding-left: 0;
+      li {
+        float: none;
+        text-align: center;
+        font-size: 18px;
+        margin-right: 0;
+      }
+      a {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+*/

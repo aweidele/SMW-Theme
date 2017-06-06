@@ -1,0 +1,9 @@
+$fontfolder: 'inc/fonts/';
+$imgfolder: 'images/';
+@import 'initialize';
+@import 'fonts';
+@import 'common';
+@import 'anniversary_header';
+@import 'anniversary_content';
+@import 'anniversary_footer';
+@import 'anniversary_responsive';

@@ -1,0 +1,244 @@
+#mainContent { 
+  margin-top: $topH;
+  min-height: calc(100vh - #{$topH + 150px});
+  section {
+    border-bottom: 1px solid $gray;
+    padding: 50px 0;
+    &:first-child { padding-top: 0px; }
+    &:nth-child(2n) {
+      .col1 { float: right; }
+      .col2 { float: left; }
+    }
+  }
+  //video { @extend %blockImg; }
+}
+
+.contentContainer {
+  width: $pctW;
+  max-width: $maxW;
+  margin: auto;
+  @extend %clearAfter;
+  .col1 {
+    width: cols($sCol);
+    float: left;
+  }
+  .col2 {
+     width: calc(100% - #{cols($sCol) + $gutter});
+     float: right;
+  }
+  h2 {
+    font-size: em(36px);
+    line-height: 1em;
+    color: $purple;
+    font-weight: $fsLight;
+    margin-bottom: 0.25em;
+  }
+  p {
+    font-size: em(18px);
+    margin-bottom: 1em;
+    line-height: 1.2em;
+  }
+}
+
+#future { background-color: $beige; }
+.share {
+  li { display: inline-block; }
+}
+
+.slideshowSlides {
+  position: relative;
+  overflow: hidden;
+  max-height: 620px;
+  margin-bottom: 10px;
+  li {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s;
+    &.active { opacity: 1; z-index: 10; }
+  }
+  img { @extend %blockImg; position: relative; z-index: 100; }
+  .spacer { 
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+  }
+  .caption {
+    display: block;
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background: rgba($purple,0.8);
+    color: #FFFFFF;
+    font-size: em(14px);
+    span {
+      display: block;
+      padding: 10px;
+    }
+  }
+}
+$controlW: 50px;
+.controls {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  justify-content: space-between;
+  align-items: center;
+  @extend %flex;
+  p {
+    margin: 0;
+    width: $controlW;
+    height: $controlW;
+    line-height: $controlW;
+    background-color: rgba($beige,0.9);
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.25s;
+    &:hover {
+      background-color: rgba($purple,0.9);
+      a { color: #FFFFFF; }
+    }
+    &.prev a:after { content: "<"; }
+    &.next a:after { content: ">"; }
+  }
+  a{ 
+    @extend %blockA;
+    color: darken($gray,23);
+  }
+  span { @extend %positionOff; }
+}
+$thumbW: 109px;
+$thumbH: 85px;
+.slideThumbs {
+  @extend %clearAfter;
+  //@extend %flex;
+  //flex-wrap: wrap;
+  //justify-content: space-between;
+  li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: $thumbW;
+    height: $thumbH;
+    overflow: hidden;
+  }
+}
+
+/*** CONTACT FORM ***/
+#share {
+  h2 { text-align: center; }
+  .intro {
+    text-align:  center;
+    font-size: em(24px);
+  }
+}
+
+.share { @extend #share; }
+
+$labelH: 22px;
+$fieldH: 28px;
+$fieldS: 19px;
+%field {
+  @extend %sans;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $gray;
+  background-color: $beige;
+  font-size: em(18px);
+  padding: 0 5px;
+}
+
+.shareForm {
+  max-width: cols(8);
+  width: 100%;
+  margin: auto;
+  @extend %clearAfter;
+  p {
+    line-height: 1em;
+    margin-bottom: $fieldS;
+    font-size: em(15px);
+    @extend %marginBottomLast0;
+  }
+  label { 
+    display: block;
+    height: $labelH;
+  }
+  input{
+    &[type="text"],&[type="email"] {
+     @extend %field;
+     height: $fieldH;
+    }
+  }
+  textarea { 
+    @extend %field;
+    height: ($fieldH * 3) + ($labelH * 2) + ($fieldS * 2);
+  }
+}
+.contactFields {
+  width: 48%;
+  float: left;
+}
+.contactMessage {
+  width: 48%;
+  float: right;
+}
+
+.checkbox {
+  label {
+    @extend %clearAfter;
+    height: auto;
+    &:before {
+      @extend %glyphs;
+      font-size: 9px;
+      display: block;
+      float: left;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      text-align: center;
+      border: 1px solid $gray;
+      background-color: $beige;
+      content: " ";
+    }
+  }
+  span {
+    margin-left: 26px;
+    display: block;
+  }
+  input[type="checkbox"] { 
+    @extend %positionOff;
+    &:checked + label:before { content: 'x'; }
+  }
+}
+
+.submitButton {
+  text-align: right;
+  button {
+    @extend %sans;
+    display: inline-block;
+    font-size: em(18px);
+    width: 100%;
+    max-width: 130px;
+    height: 40px;
+    border: 1px solid darken($beige,56);
+    background: transparent;
+    box-sizing: border-box;
+    transition: background-color 0.25s, color 0.25s;
+    &:hover {
+      color: #FFFFFF;
+      background-color: lighten($purple,13.5);
+    }
+  }
+}
+
+
+.test { @extend %glyphs; }

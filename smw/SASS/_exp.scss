@@ -1,0 +1,10 @@
+@keyframes woo {
+  0% { background-color: blue; }
+  100% { background-color: red; }
+}
+
+.testo:after {
+  animation:  woo 5s;
+  content: "not working";
+  display: inline-block;
+}

@@ -1,0 +1,253 @@
+/* line 1, ../SASS/_initialize.scss */
+html, body, header, footer, section, article, aside, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  font-weight: normal;
+}
+
+/* line 9, ../SASS/_initialize.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 11, ../SASS/_initialize.scss */
+strong {
+  font-weight: 600;
+}
+
+/* line 11, ../SASS/splash.scss */
+#adjust p:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+/* line 20, ../SASS/splash.scss */
+#contentLayer {
+  display: flex;
+}
+
+/* line 30, ../SASS/splash.scss */
+.button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 35, ../SASS/splash.scss */
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 47, ../SASS/splash.scss */
+body {
+  font-family: "freight-sans-pro",sans-serif;
+}
+
+/* line 67, ../SASS/splash.scss */
+body {
+  background-color: #26128c;
+}
+
+/* line 72, ../SASS/splash.scss */
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: color 0.25s;
+}
+
+/* line 78, ../SASS/splash.scss */
+#contentWrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 85, ../SASS/splash.scss */
+#videoLayer {
+  position: relative;
+  z-index: 0;
+}
+/* line 90, ../SASS/splash.scss */
+#videoLayer video {
+  display: block;
+}
+
+/* line 99, ../SASS/splash.scss */
+#dotLayer, #contentLayer, #swooshLayer {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 106, ../SASS/splash.scss */
+#swooshLayer {
+  background-image: url("images/swoosh.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 10;
+  transition: opacity 0.25s;
+}
+
+/* line 114, ../SASS/splash.scss */
+#dotLayer {
+  background-image: url("images/dots.png");
+  z-index: 20;
+}
+
+/* line 118, ../SASS/splash.scss */
+#contentLayer {
+  background-color: rgba(38, 18, 140, 0.7);
+  z-index: 30;
+  color: #FFFFFF;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s;
+}
+
+/* line 129, ../SASS/splash.scss */
+h1 {
+  font-size: 2.625em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+
+/* line 135, ../SASS/splash.scss */
+p {
+  font-size: 1.875em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+/* line 141, ../SASS/splash.scss */
+#contentLayerContent {
+  max-width: 800px;
+  width: 90%;
+}
+
+/* line 146, ../SASS/splash.scss */
+.button {
+  width: 100%;
+  max-width: 290px;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: content-box;
+  border: 2px solid #FFFFFF;
+  margin: auto auto 20px auto;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.5s;
+}
+/* line 158, ../SASS/splash.scss */
+.button a {
+  transition: color 0.5s;
+}
+/* line 162, ../SASS/splash.scss */
+.button:hover {
+  background-color: #FFFFFF;
+}
+/* line 165, ../SASS/splash.scss */
+.button:hover a {
+  color: #26128c;
+}
+
+/* line 168, ../SASS/splash.scss */
+.continue {
+  font-size: 1.125em;
+}
+
+/* line 170, ../SASS/splash.scss */
+.feedback {
+  position: fixed;
+  z-index: 9000;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+  color: #FFFFFF;
+  padding: 5px;
+  display: none;
+}
+
+/* line 182, ../SASS/splash.scss */
+.logo {
+  max-width: 300px;
+  margin: 0 auto 1em auto;
+}
+
+/* line 188, ../SASS/splash.scss */
+#adjust {
+  position: fixed;
+  z-index: 1000;
+  left: 20px;
+  bottom: 20px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+}
+/* line 197, ../SASS/splash.scss */
+#adjust p {
+  width: 150px;
+  font-size: 11px;
+}
+/* line 202, ../SASS/splash.scss */
+#adjust label {
+  display: block;
+  float: left;
+  width: 70%;
+  text-align: right;
+}
+/* line 208, ../SASS/splash.scss */
+#adjust input {
+  width: 25%;
+  float: right;
+  display: block;
+  color: #FFFFFF;
+  font-size: 11px;
+  background: transparent;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* line 218, ../SASS/splash.scss */
+input {
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 222, ../SASS/splash.scss */
+  .logo {
+    max-width: 160px;
+  }
+
+  /* line 223, ../SASS/splash.scss */
+  h1 {
+    font-size: 1.6em;
+  }
+
+  /* line 224, ../SASS/splash.scss */
+  p {
+    font-size: 1em;
+  }
+
+  /* line 225, ../SASS/splash.scss */
+  .button {
+    font-size: 1em;
+  }
+
+  /* line 226, ../SASS/splash.scss */
+  .continue {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,37 @@
+/*** FOOTER ***/
+footer {
+  min-height: 150px;
+  background-color: $gray;
+}
+
+.footerNav {
+  @extend %flex;
+  max-width: cols(8);
+  width: $pctW;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: em(18px);
+  line-height: 1em;
+  border-bottom: 1px solid #666666;
+  a {
+    display: block;
+    margin-top: 34px;
+    margin-bottom: 23px;
+    padding-right: 5px;
+    &:hover { color: $purple; }
+  }
+  li:last-child a { padding-right: 0; }
+  .social {
+    width: 60px;
+    text-align: right;
+    li { display: inline-block; }
+  }
+}
+.copyright {
+  text-align: center;
+  font-size: em(15px);
+  color: #666666;
+  padding: 17px;
+}

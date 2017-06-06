@@ -1,0 +1,66 @@
+#industryWrapper {
+  @extend %contentWrapper;
+  
+  section {
+  	margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 80px;
+    }
+  }
+  
+  .subnavContainer { @extend %offset-0; }
+  .newsNextPrev {
+    @extend %col-3;
+    @extend %col-sm-stack;
+    padding-top: 16px;
+  }
+}
+
+#industryContent {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  padding-bottom: 30px;
+}
+
+.industryQuote { @extend %quoteBox; }
+.industryQuoteText { @extend %quoteBoxText;
+  .downloadBrochure { @extend %quoteBoxButton; }
+}
+.quoteAttribution { @extend %quoteBoxAttribution; }
+.industryLeader { @extend %quoteBoxAttribute; }
+.industryQuoteOverlay { @extend %quoteBoxOverlay; }
+
+$pg: ceil(($gutter * 3) / 4);
+#industryProjects, .industryRelated {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  > h3 { @extend %h3; }
+  .project {
+	h3 { 
+  	  color: #FAFAFA; 
+	  //font-size: 0.875em;
+    }
+  }
+  .project, .newsTile {
+	width: -webkit-calc(25% - #{$pg});
+	width: calc(25% - #{$pg});
+    float: left;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+    &:nth-child(4n) { margin-right: 0; }
+    &:nth-child(4n+1) { clear: both; }
+    @media screen and (min-width: $sm + 1) and (max-width: $lg) {
+      width: -webkit-calc(50% - #{ceil($gutter / 2)});
+      width: calc(50% - #{ceil($gutter / 2)});
+      &:nth-child(4n) { margin-right: $gutter; }
+      &:nth-child(4n+1) { clear: none; }
+      &:nth-child(2n) { margin-right: 0; }
+      &:nth-child(2n+1) { clear: both; }
+    }
+    @media screen and (max-width: $sm) {
+      width: 100%;
+      float: none;
+      margin-right: 0; 
+    }
+  }
+}

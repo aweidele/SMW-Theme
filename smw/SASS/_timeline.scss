@@ -1,0 +1,13 @@
+#tl1, #content #tl1 {
+	.item {
+		span {
+			font-size: 24px;
+		}
+	
+		.my_timeline_content {
+			.read_more {
+				display: none !important;
+			}		
+		}
+	}
+}

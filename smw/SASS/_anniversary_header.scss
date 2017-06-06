@@ -1,0 +1,122 @@
+.fixedTop {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: $topH;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#externalNav {
+  font-size: em(15px);
+  height: $extNavH;
+  line-height: $extNavH;
+  border-bottom: 1px solid $gray;
+  ul {
+    width: $pctW;
+    max-width: $maxW;
+    margin: auto;
+    text-align: right;
+  }
+  li {
+    display: inline-block;
+    margin-right: 3px;
+    @extend %marginLast0;
+  }
+  a { @extend %blockA; }
+}
+.navHome { margin-right: 8px; }
+.facebook {
+  @extend %social;
+  a:after { content: "F"; }
+}
+.twitter {
+  @extend %social;
+  a:after { content: "T"; }
+}
+.linkedin {
+  @extend %social;
+  a:after { content: "L"; }
+}
+
+header {
+  width: $pctW;
+  max-width: $maxW;
+  height: $headerH;
+  margin: auto;
+  @extend %flex;
+
+  h1 {
+    width: cols($sCol);
+    //float: left;
+    height: $headerH;
+    background-repeat: no-repeat;
+    background-size: 185px 40px;
+    background-position: left center;
+    margin-right: $gutter;
+    a { @extend %blockA; }
+  }
+  h2 {
+    width: calc(100% - #{cols($sCol) + $gutter});
+    //float: right;
+    font-size: em(21px);
+    align-self: flex-end;
+    padding-bottom: 10px;
+    line-height: 1em;
+  }
+  span { @extend %indentOff; }
+}
+
+#internalNav {
+  height: $intNavH;
+  line-height: 1em;
+  border-top: 1px solid $gray;
+  transition: right 0.4s;
+  ul {
+    margin-left: cols($sCol) + $gutter;
+    
+  }
+  li {
+    display: inline-block;
+    font-size: em(18px);
+    margin-right: 40px;
+    @extend %marginLast0;
+    &.active a { color: $purple; }
+  }
+  a {
+    display: block;
+    padding: round(($intNavH - 18) / 2) - 4 0; 
+  }
+}
+
+.internalNavContainer {
+  width: $pctW;
+  max-width: $maxW;
+  margin: auto;
+  @extend %clearAfter;
+}
+
+
+$menuW: 23px;
+$menuP: 25px;
+
+#mobileMenuToggle { @extend %positionOff; }
+#mobileMenuToggleButton {
+  position: absolute;
+  right: 0px;
+  top: $extNavH;
+  width: $menuW;
+  height: $headerH;
+  line-height: $headerH;
+  padding: 0 $menuP;
+  color: $purple;
+  cursor: pointer;
+  font-size: 26px;
+  display: none;
+  @extend %glyphs;
+  span { @extend %positionOff; }
+  &:after {
+    content: "=";
+  }
+}

@@ -1,0 +1,56 @@
+.searchResults {
+  @extend %contentWrapper;
+}
+
+#searchProjects {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  article {
+    width: -webkit-calc(33% - #{($gutter * 2) / 3});
+    width: calc(33% - #{($gutter * 2) / 3});
+    float: left;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+    @media screen and (min-width: $lg + 1) {
+      &:nth-child(3n) { margin-right: 0; }
+      &:nth-child(3n+1) { clear: both; }
+    }
+    @media screen and (max-width: $lg) {
+      width: calc(50% - #{$gutter / 2});
+      width: calc(50% - #{$gutter / 2});
+      &:nth-child(2n) { margin-right: 0; }
+      &:nth-child(2n+1) { clear: both; }
+    }
+    @media screen and (max-width: $md) {
+      width: 100%;
+      float: none;
+      margin-right: 0;
+    }
+  }
+}
+
+
+.search-results-section {
+  @extend %clearAfter;
+}
+.search-results-section-title {
+  @extend %h3;
+}
+h3.search-results-section-title {
+	a {
+		float: right;
+		margin-right: 11px;
+	}
+}
+h1.no-results {
+	display: none;
+}
+.search-no-results {
+	h1.no-results {
+		display: block;
+	}
+	h1.results {
+		display: none;
+	}
+	
+}

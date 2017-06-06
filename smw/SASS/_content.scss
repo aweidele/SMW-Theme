@@ -1,0 +1,786 @@
+%h2 {
+    color: $purple;
+    font-weight: 300;
+    font-size: em(36px);
+    margin-bottom: 0.5em;
+    line-height: 1.1em;  
+}
+
+%h3 {  
+  font-size: em(15px);
+  color: $purple;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+.sharebox {
+	padding: 20px 0;
+}
+.slideshowContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  padding: 31% 0;
+  .projectColBig & { padding: 36% 0; }
+}
+
+.slideshowSlider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-transition: left 0.25s,right 0.25s;
+    transition: left 0.25s,right 0.25s;
+    z-index: 0;
+    .slide {
+      position: absolute;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 0;
+      img { 
+      	@extend %blockImg;
+      }
+      &:first-child { z-index: 100; left: 0; }
+      /*a {
+	      display: block;
+	      background-size: cover;
+	      background-position: center center;
+	      min-height: 500px;
+      }*/
+    }
+}
+.single-projects #singleProjectSlideshow {
+	.slideshowSlider {
+		.slide {
+			background-size: cover;
+			background-position: center center;
+			height: 535px;
+			img {
+				opacity: 0;
+			}
+			@media screen and (max-width: $md) {
+				height: 400px;
+			}
+			@media screen and (max-width: 550px) {
+				height: 330px;
+			}
+			@media screen and (max-width: $sm) {
+				height: 280px;
+			}
+			@media screen and (max-width: 400) {
+				height: 240px;
+			}
+		}
+	}
+}
+
+.page-template-template-projects #projects-intro, .page-template-template-careers #careers, .single-post #newsWrapper {
+	.slideshowSlider {
+		.slide {
+			background-size: cover;
+			background-position: center center;
+			height: 535px;
+			img {
+				opacity: 0;
+			}
+			@media screen and (max-width: $lg) {
+				height: 400px;
+			}
+			@media screen and (max-width: $md) {
+				height: 450px;
+			}
+			@media screen and (max-width: 550px) {
+				height: 330px;
+			}
+			@media screen and (max-width: $sm) {
+				height: 280px;
+			}
+			@media screen and (max-width: 400px) {
+				height: 240px;
+			}
+		}
+	}
+}
+.single-post .newsDetail .slideshowContainer {
+	height: 535px;
+	padding: 0;
+	@media screen and (max-width: $lg) {
+		height: 400px;
+	}
+	@media screen and (max-width: $md) {
+		height: 450px;
+	}
+	@media screen and (max-width: 550px) {
+		height: 330px;
+	}
+	@media screen and (max-width: $sm) {
+		height: 280px;
+	}
+	@media screen and (max-width: 400px) {
+		height: 240px;
+	}
+}
+.page-template-template-services #services-intro {
+	.slideshowSlider {
+		.slide {
+			background-size: cover;
+			background-position: center center;
+			height: 585px;
+			img {
+				opacity: 0;
+			}
+			@media screen and (max-width: $lg) {
+				height: 400px;
+			}
+			@media screen and (max-width: $md) {
+				height: 450px;
+			}
+			@media screen and (max-width: 550px) {
+				height: 330px;
+			}
+			@media screen and (max-width: $sm) {
+				height: 280px;
+			}
+			@media screen and (max-width: 400px) {
+				height: 240px;
+			}
+		}
+	}
+}
+.projectCol, .single-projects, .single-services, .single-post #newsWrapper .newsRelatedList {
+	.slideshowSlider {
+		.slide {
+			background-size: cover;
+			background-position: center center;
+			height: 200px;
+			img {
+				opacity: 0;
+			}
+			@media screen and (max-width: $lg) {
+				height: 155px;
+			}
+			@media screen and (max-width: $md) {
+				height: 250px;
+			}
+			@media screen and (max-width: 550px) {
+				height: 170px;
+			}
+			@media screen and (max-width: $sm) {
+				height: 330px;
+			}
+			@media screen and (max-width: 400px) {
+				height: 270px;
+			}
+		}
+	}
+}
+#industryProjects {
+	.slideshowSlider {
+		.slide {
+			background-size: cover;
+			background-position: center center;
+			height: 200px;
+			img {
+				opacity: 0;
+			}
+			@media screen and (max-width: $lg) {
+				height: 335px;
+			}
+			@media screen and (max-width: 900px) {
+				height: 285px;
+			}
+			@media screen and (max-width: $md) {
+				height: 250px;
+			}
+			@media screen and (max-width: 550px) {
+				height: 170px;
+			}
+			@media screen and (max-width: $sm) {
+				height: 330px;
+			}
+			@media screen and (max-width: 400px) {
+				height: 270px;
+			}
+		}
+	}
+}
+.projectColBig {
+	.slideshowSlider {
+		.slide {
+			background-size: cover;
+			background-position: center center;
+			height: 410px;
+			img {
+				opacity: 0;
+			}
+			@media screen and (max-width: $lg) {
+				height: 340px;
+			}
+			@media screen and (max-width: $md) {
+				height: 500px;
+			}
+			@media screen and (max-width: 550px) {
+				height: 360px;
+			}
+			@media screen and (max-width: $sm) {
+				height: 320px;
+			}
+			@media screen and (max-width: 400px) {
+				height: 280px;
+			}
+		}
+	}
+}
+
+.slideshowControls {
+  .prevNext {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: 50;
+    li {
+      position: absolute;
+      -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #FFFFFF;
+      opacity: 0.8;
+      -webkit-transition: left 0.5s, right 0.5s;
+      transition: left 0.5s, right 0.5s;
+      &:first-child {
+        left: -30px;
+        cursor: w-resize;
+        &:after { content: "<"; }
+      }
+      &:last-child {
+        right: -30px;
+        cursor: e-resize;
+        &:after { content: ">"; }
+      }
+      @media screen and (max-width: $md) {
+        &:first-child { left: 0; }
+        &:last-child { right: 0; }
+      }
+    }
+  }
+  .slideshowIndicators {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    z-index: 50;
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: rgba(#FFF,0.5);
+      -webkit-transition: background-color 0.25s;
+      transition: background-color 0.25s; 
+      cursor: pointer;
+      &.active { background-color: rgba(#FFF,0.95); }
+    }
+  }
+  span { @extend %positionOff; }
+  .slideshowContainer:hover & {
+    .prevNext li {
+      &:first-child { left: 0; }
+      &:last-child { right: 0; }
+    }
+  }
+}
+
+.slideshowOverlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 25;
+  background-color: rgba($purple,0.6);
+  color: $beige;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+  h3,h4 { font-size: 14px; }
+  .slideshowOverlayContainer { padding: 8px 8px 28px; text-align: center; }
+  .slideshowContainer:hover & { opacity: 1; }
+  @media screen and (max-width: $md) { opacity: 1; }
+  a { 
+    display: block;
+    color: #FFFFFF;
+  }
+}
+
+.slideshowSlideTitles {
+  height: 40px;
+  h3 { display: none; 
+    &.active { display: block; }
+  }
+}
+
+.pageSectionContent {
+  @extend %clearAfter;
+  @extend %fullWidth;
+}
+
+.pageSectionCopy {
+  @extend %col-3;
+  @extend %col-lg-4;
+  @extend %col-md-stack;
+  p { font-size: em(18px); margin-bottom: 1em; }
+  h2 { @extend %h2; }
+  ul {  margin-bottom: 1em;  }
+  li { margin-bottom: 0.25em; font-size: em(15px); position: relative; padding-left: 1em;
+    &:before { content: "\2022"; position: absolute; left: 0; font-size: 0.75em; }
+   }
+  p,li,ul { 
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.pageSectionRight {
+  @extend %col-9;
+  @extend %col-lg-8;
+  @extend %col-md-stack;
+  @extend %clearAfter;
+}
+
+@media screen and (max-width: $md) {
+  .pageSectionCopy, .pageSectionRight { 
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Quote box
+%quoteBox {
+  width: 100%;
+  min-height: 550px;
+  float: left;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  color: $beige; 
+  z-index: 0;
+  a,.leadershipCard a { 
+    &,&:hover { color: $beige; }
+  }
+}
+
+%quoteBoxText,%quoteBoxAttribute {
+  position: relative;
+  z-index: 100;
+  padding: 50px 0;
+	float: right; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+	padding-top: 50px;
+	padding-bottom: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @media screen and (max-width: $sm) {
+  	padding-bottom: 30px;
+  }
+}
+
+%quoteBoxText {
+	width: 70%;
+	@media screen and (max-width: $lg) {
+		width: 60%;
+	 }
+	 @media screen and (max-width: $sm) {
+		width: 100%;
+		padding-bottom: 0;
+	 }
+  p { 
+    font-size: em(32px); 
+    margin-right: 0; 
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    &:last-child { margin-bottom: 0; }
+    @media screen and (max-width: $md) { margin-right: $gutter; font-size: em(25px); }
+    &%quoteBoxAttribution {
+      text-align: left;
+      font-size: em(24px);
+      margin-top: -1em;
+       @media screen and (max-width: $sm) {
+       	text-align: right;
+       	padding: 15px 0 30px;
+       }
+    }
+  }
+  %quoteBoxButton { @extend %linkButton; font-size: em(18px); }
+}
+
+
+
+%quoteBoxAttribute {
+  @extend %clearAfter;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  width: 30%;
+  @media screen and (max-width: $lg) {
+	width: 40%;
+ }
+ @media screen and (max-width: $sm) {
+	width: 100%;
+	padding-bottom: 0;
+	padding-top: 0;
+ }
+  .leadershipCard {
+    margin-bottom: 40px;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+}
+  
+  
+%quoteBoxOverlay {
+  background-color: rgba($purple,0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+@media screen and (max-width: $lg) {
+  %quoteBoxText {
+  	padding-top: 80px;
+    p { font-size: em(28px); }
+  }
+}
+@media screen and (max-width: $md) {
+  %quoteBoxText {
+    p { font-size: em(20px); }
+  }
+}
+@media screen and (min-width: $smxs) and (max-width: $lg) {
+  %quoteBoxAttribute .leadershipCard {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    &:only-child { width: 100%; float: none; }
+  }
+}
+
+.subnav {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  .filters > ul {
+    @extend %flex;
+    > li {
+      font-size: em(18px);
+      line-height: 1.2em;
+      margin-right: 35px;
+      &.active a { color: $purple; }
+      a {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 26px;
+      }
+    }
+  }
+  
+  .filters {
+    float: left;
+    padding-top: 16px;
+    padding-bottom: 26px;
+    @extend %clearAfter;
+    > li {
+      float: left;
+      margin-right: 20px;
+      font-size: em(18px);
+      line-height: 22px;
+      height: 22px;
+      z-index: 100;
+      cursor: pointer;
+      -webkit-transition: color 0.25s;
+      transition: color 0.25s;
+      &:hover {
+        color: $purple;
+        
+      }
+      > span {
+        display: inline-block;
+        //display: none;
+        margin-left: 10px;
+        position: relative;
+        top: 3px;
+      }
+      
+      &.with-icon {
+      	margin-top: -1px;
+      }
+    }
+    .filterDropdown {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 22px + 16px;
+      padding-top: 10px;
+      padding-left: 7px;
+      -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      z-index: 1000;
+      display: none;
+      &.open {
+        display: block;
+      }
+      .splitList {
+        width: 33%;
+        float: left;
+        margin-left: $gutter;
+      }
+      a {
+        display: block;
+        color: $lightgray;
+        padding: 5px 0;
+        &:hover {
+        	color: #FFFFFF;
+        }
+        transition: color 0.25s ease-out;
+    	-moz-transition: color 0.25s ease-out;
+    	-webkit-transition: color 0.25s ease-out;
+      }
+    }
+    @media screen and (max-width: $smxs) {
+      > li {
+        &:first-child {
+          width: 100%;
+          float: none;
+          margin-bottom: 5px;
+        }
+      }
+      .filterDropdown {
+        top: 44px + 16px;
+        padding-left: 0;
+      }
+    }
+    .filterDropdownContent {
+      @extend %clearAfter;
+      padding: 10px 52px;
+      background: $purple;
+      @media screen and (max-width: $mdsm) {
+        padding: 10px 0;
+        li { font-size: 1rem; }
+      }
+    }
+  }
+  .views {
+    //float: right;
+    position: relative;
+    top: 2px;
+    > li {
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      font-size: 19px;
+      line-height: 19px;
+      margin: 0 10px;
+      position: relative;
+      @extend %glyphs;
+      &.gridview a:after { content: "\e901"; }
+      &.listview a:after { content: "\e902"; }
+      &.locationview a:after { content: "\e900"; }
+      &:before {
+        width: 1px;
+        background-color: $gray;
+        display: block;
+        height: 17px;
+        position: absolute;
+        left: -11px;
+        //top: 16px;
+        content: " ";
+      }
+      &:first-child:before { display: none; }
+      &:last-child { margin-right: 0; }
+    }
+    a { 
+      @extend %blockA;
+      color: $black;
+      &:hover {
+        color: $purple;
+      }
+    }
+    span { @extend %positionOff; }
+    @media screen and (max-width: $lg) { 
+      display: none; 
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .subnav .filters, .filter-search-right {
+    float: none;
+  }
+}
+
+.subnavContainer {
+  @extend %col-9;
+  @extend %offset-3;
+  @extend %col-md-stack;
+    position: relative;
+}
+
+.careersNav {
+  @extend %subnav;
+  a {
+    padding-bottom: 5px;
+  }
+}
+
+.jobsList {
+  margin-bottom: 50px;
+  h3 { @extend %h3; }
+  h4 {
+    font-size: em(21px);
+    margin-bottom: 0.25em;
+    cursor: pointer;
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+    &:hover,&.active { color: $purple; }
+  }
+  p {
+    margin-bottom: 1em;
+
+    &.collapse-accordion {
+      color: $purple;
+      margin-bottom: 40px;
+      cursor: pointer;
+    }
+    
+    + ul { margin-top: -1em; }
+  }
+  &.init .jobsDetail { display: none; }
+  li.active {
+	  h4 {
+		  color: $purple;
+	  }
+	  .jobsDetail {
+		  display: block;
+	  }
+  }
+  
+}
+
+.jobsDetail {
+  ul {
+    list-style: disc;
+    padding-left: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.share {
+    @extend %glyphs;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px;
+    z-index: 20;
+    cursor: pointer;
+    &:after {
+      content: "l";
+    }
+}
+
+.contactMainWrapper {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  @media screen and (max-width: 800px) {
+    //position: static;
+  }
+}
+.contactMain {
+  @extend %fullWidth;
+  h2 { @extend %h2; font-size: em(24px); }
+  p { margin-bottom: 1em; font-size: em(18px); }
+}
+.contactMainContent {
+  @extend %col-6;
+  @extend %offset-3;
+}
+
+// 404
+.container404 {
+  @extend %col-6;
+  @extend %offset-3;
+  text-align: center;
+  h1 {
+    color: $purple;
+  }
+  .search404 {
+    margin: auto;
+  }
+}
+
+
+/* Contact */
+.contactMainContent, .newsIntroContainer {
+	input {
+    &[type='email'],&[type='text'] { 
+      @extend %sans;
+      max-width: 225px; 
+      width: 100%; 
+      -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+      box-sizing: border-box; 
+      border: 1px solid $gray; 
+      font-size: 15px; 
+      padding: 0 5px; 
+      height: 26px;
+      background-color: lighten($gray,5); 
+    }
+  }
+  button {
+    @extend %sans;
+    font-size: 18px;
+    width: 100%;
+    max-width: 130px;
+    height: 40px;
+    border: 1px solid darken($beige,56);
+    background: transparent;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.25s, color 0.25s;
+    transition: background-color 0.25s, color 0.25s;
+    &:hover {
+      color: #FFFFFF;
+      background-color: lighten($purple,13.5);
+    }
+  }
+p {
+    margin-bottom: 1em;
+}
+}
+.newsIntroContainer {
+	h3 {
+		color: #26128c;
+		font-weight: 300;
+		font-size: 1.7em;
+		margin-bottom: .5em;
+		line-height: 1.1em;
+	}
+}

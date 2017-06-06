@@ -1,0 +1,92 @@
+.timeline.flatNav .t_controles {
+	.t_left, .t_right {
+		opacity: 1 !important;
+	}
+}
+
+#aboutWrapper {
+  @extend %contentWrapper;
+  .pageSectionContent { @extend %fullWidth; }
+  section { 
+    border-bottom: 1px solid $gray;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    &:first-child { padding-top: 0; }
+    &:last-child { border: 0; }
+    &:nth-child(2n) {
+      background-color: $beige; 
+      .pageSectionCopy { float: right; padding-right: 0; padding-left: $gutter; }
+      .pageSectionRight { float: left; }
+      @media screen and (max-width: $md) {
+        .pageSectionCopy,.pageSectionRight { float: none; padding: 0; }
+        
+      }
+    }
+  }
+  
+}
+
+.aboutLeadership {
+  @extend %clearAfter;
+  .leadershipCard { 
+    width: 25%; 
+    text-align: center; 
+    float: left;
+    margin-bottom: 30px;
+    &:nth-child(4n+1)  { clear: both; }
+    @media screen and (max-width: $mdsm) , screen and (min-width: $md) and (max-width: $lg) {
+      width: 33%;
+      &:nth-child(4n+1)  { clear: none; }
+      &:nth-child(3n+1)  { clear: both; }
+    }
+    @media screen and (max-width: $smxs) {
+      width: 50%;
+      min-height: 250px;
+      &:nth-child(3n+1)  { clear: none; }
+    }
+/* 
+    @media screen and (max-width: 900px) {
+      width: 33%;
+      &:nth-child(3n) + .leadershipCard { clear: both; }
+      &:nth-child(4n) + .leadershipCard { clear: none; }
+    }
+    @media screen and (max-width: $sm) {
+      width: 50%;
+      &:nth-child(2n) + .leadershipCard { clear: both; }
+      &:nth-child(3n) + .leadershipCard { clear: none; }
+    }
+ */
+  }
+}
+
+.timeline_line {
+  @media screen and (max-width: $mdsm) {
+    display: none; 
+  }
+}
+@media screen and (max-width: $lg) {
+	#a-history-of-innovation {
+		.globallocations {
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: $md) {
+	#our-leadership {
+		.globallocations {
+	    	margin-bottom: 20px;
+	    	p,ul { display: none; }
+	    }
+	}
+	#a-history-of-innovation {
+		.globallocations {
+			overflow: hidden;
+			display: block;
+			li {
+				float: left;
+				width: 45%;
+				max-width: 200px;
+			}
+		}
+	}
+}

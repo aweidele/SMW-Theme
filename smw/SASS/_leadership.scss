@@ -1,0 +1,183 @@
+.leadershipCard {
+  p { line-height: 1.2em ; }
+  a {
+    color: $black;
+    &:hover { color: $purple; border: 0; }
+  }
+}
+.leadershipPortrait {
+  height: 120px;
+  width: 120px;
+  margin: 0 auto 6px;
+  @media screen and (max-width: $xs) { width: 100px; }
+  img {
+    display: inline-block;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.leadershipContact {
+  @extend %glyphs;
+  li {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    line-height: 19px;
+  }
+  span { @extend %positionOff; }
+  a {
+    @extend %blockA;
+  }
+  .email a:after { content: "M"; float: left; padding-top: 4px; }
+  .linkedin a:after { content: "L"; }
+}
+
+#leadershipWrapper {
+  @extend %contentWrapper;
+  
+  position: relative;
+  
+  section {
+    @extend %fullWidth;
+    @extend %clearAfter;
+  }
+  
+  .post-links-wrapper {
+  	position: absolute;
+  	top: -30px;
+  	left: 0;
+  	width: 100%;
+  	
+  	.post-links {
+	  @extend %fullWidth;
+	  
+	  .post-links-content {
+	  	@extend %col-8;
+	  	@extend %offset-4;
+	  	//text-align: right;
+	  }
+	}
+  }
+  
+  .leadershipLeft { 
+  	@extend %col-2; 
+  	@extend %offset-1;
+	@extend %col-lg-3;
+  	@extend %offset-lg-0;
+  	@extend %col-sm-12;
+  	margin-bottom: 20px;
+  }
+  .leadershipCopy { 
+    @extend %col-7; 
+    @extend %col-lg-9; 
+    @extend %col-sm-12; 
+  }
+  .leadershipNextPrev {
+    @extend %col-2;
+    @extend %col-lg-9;
+    @extend %offset-lg-3;
+    @extend %col-sm-12;
+    @extend %offset-sm-0;
+    text-align: right; 
+    padding-top: 8px;
+    @media screen and (max-width: $lg ) { text-align: left;  margin-top: 1em; }
+      li {
+        display: inline-block;
+        &:after { content: "|"; display: inline-block; padding: 0 1px 0 5px; }
+        &:last-child:after { content: ""; }
+    }
+  }
+  .leadershipList { margin-top: 50px; }
+}
+
+.leadershipLeft { text-align: center; }
+
+.leadershipCopy {
+  p { 
+    font-size: em(18px);
+    margin-bottom: 1em;
+    &:first-of-type {
+      color: $purple;
+      font-size: em(24px);
+      font-weight: 700;
+    }
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+#leadershipPopup {
+  position: absolute;
+  z-index: 2000;
+  top: $gutter;
+  left: 0px;
+  width: 100%;
+  display: none;
+}
+
+.leadershipPopupContainer {
+  @extend %fullWidth;
+  position: relative;
+}
+
+.leadershipPopupContent {
+  @extend %col-9;
+  @extend %col-lg-12;
+  background-color: #FFFFFF;
+  border: 1px solid $gray;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &,&:first-child,&:last-child { padding: 50px 16px; }
+/* 
+  padding: $gutter + 10 $gutter $gutter 0;
+  min-height: 400px;
+  &:last-child { padding-right: $gutter; }
+  .leadershipBio { @extend %clearAfter; }
+ */
+  .leadershipLeft { width: 25%; float: left; }
+  .leadershipCopy { width: 75%; float: right; }
+  .leadershipNextPrev { display: none; }
+}
+
+.leadershipPopupClose {
+  @extend %col-9;
+  @extend %col-lg-stack;
+  position: absolute;
+  top: 0;
+  left: 0;
+  button {
+    @extend %glyphs;
+    border: 0;
+    background: transparent;
+    width: 44px;
+    height: 44px;
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 44px;
+    span { @extend %positionOff; }
+    &:after { content: "\e117"; }
+  }
+}
+
+.leadershipList {
+  h3 { @extend %h3; margin-bottom: $gutter; text-align: center; }
+  .leadershipCards { @extend %clearAfter; }
+  .leadershipCard {
+    text-align: center;
+    margin-bottom: $gutter;
+    @extend %col-2;
+    @extend %col-lg-3;
+    @extend %col-mdsm-4;
+    @extend %col-sm-6;
+    @extend %col-xs-stack;
+    
+    @media screen and (max-width: $sm) { &:nth-child(2n+1) { clear: both; } }
+    @media screen and (min-width: $sm + 1) and (max-width: $mdsm) { &:nth-child(3n+1) { clear: both; } }
+    @media screen and (min-width: $mdsm + 1) and (max-width: $lg) { &:nth-child(4n+1) { clear: both; } }
+    @media screen and (min-width: $lg + 1) { &:nth-child(6n+1) { clear: both; } }
+    
+  }
+}

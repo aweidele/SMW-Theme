@@ -1,0 +1,9 @@
+$fontfolder: 'fonts/';
+$imgfolder: '../images/';
+@import 'initialize';
+@import 'fonts';
+@import 'common';
+@import 'header';
+@import 'content';
+@import 'footer';
+//@import 'responsive';

@@ -1,0 +1,43 @@
+.single-jobs {
+	.newsContent {
+		ul {
+			margin-bottom: 20px;
+		}
+		li {
+			margin-bottom: 0.25em; 
+			font-size: em(15px); 
+			position: relative; 
+			padding-left: 1em;
+			&:before {
+				content: "\2022";
+				position: absolute;
+				left: 0;
+				top: 1px;
+				font-size: .75em;
+			}
+		}
+		.sharebox li {
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.single-jobs .newsContent {  
+  font-size: em(18px);
+  p { margin-bottom: 1em; }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+}
+
+.page-template-template-careers .pageSectionCopy {
+	margin-bottom: 40px;
+}
+
+.jobsList h3 {
+	font-size: 1.4em;
+}

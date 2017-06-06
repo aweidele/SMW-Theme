@@ -1,0 +1,22 @@
+/*
+Theme Name: SMW
+*/
+$fontfolder: 'inc/fonts/';
+$imgfolder: 'images/';
+@import 'initialize';
+@import 'fonts';
+@import 'common';
+@import 'header';
+@import 'footer';
+@import 'content';
+@import 'homepage';
+@import 'leadership';
+@import 'about';
+@import 'services';
+@import 'projects';
+@import 'industry';
+@import 'news';
+@import 'location';
+@import 'timeline';
+@import 'search';
+//@import 'exp';
